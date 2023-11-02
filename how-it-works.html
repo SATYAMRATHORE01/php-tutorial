@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How PHP Works</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">How PHP Works</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">PHP works as a server-side scripting language, which means it runs on the web server and processes requests from clients (usually web browsers). Here's how the process works:</p>
+
+        <ol>
+            <li class="mb-3">
+                <h4>Client Sends a Request:</h4>
+                <p>When a user accesses a web page that contains PHP code (usually with a ".php" extension), their web browser sends a request to the web server hosting the site.</p>
+            </li>
+
+            <li class="mb-3">
+                <h4>Server Processes PHP Code:</h4>
+                <p>The web server, which is configured to handle PHP requests, recognizes that the requested page contains PHP code. It passes the request to the PHP interpreter for processing.</p>
+            </li>
+
+            <li class="mb-3">
+                <h4>PHP Interpreter Executes Code:</h4>
+                <p>The PHP interpreter reads and executes the PHP code in the requested page. This may involve retrieving data from databases, interacting with files, or performing other server-side tasks.</p>
+            </li>
+
+            <li class="mb-3">
+                <h4>Generating HTML:</h4>
+                <p>After processing the PHP code, the PHP interpreter generates HTML content as the output. This HTML content may include dynamic data created by the PHP script.</p>
+            </li>
+
+            <li class="mb-3">
+                <h4>Server Sends HTML Response:</h4>
+                <p>The generated HTML is sent back to the web server, which, in turn, sends the HTML response to the user's web browser.</p>
+            </li>
+
+            <li class="mb-3">
+                <h4>Browser Renders the Page:</h4>
+                <p>The user's web browser receives the HTML response and renders it on the screen. From the user's perspective, they see a fully-rendered web page.</p>
+            </li>
+        </ol>
+
+        <p class="lead">This process allows PHP to create dynamic and interactive web pages by executing code on the server and sending the resulting HTML to the user's browser.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

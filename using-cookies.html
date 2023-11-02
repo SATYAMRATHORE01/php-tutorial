@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Information of Cookies</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Using Information of Cookies</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Cookies play a crucial role in web development, allowing you to store and retrieve information across web pages and sessions. Here's how you can use the information stored in cookies:</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Retrieving Cookies in PHP:</strong>
+            <p>In PHP, you can access the values of cookies using the <code>$_COOKIE</code> superglobal array. This allows you to retrieve information from cookies set in previous requests.</p>
+            <pre><code>
+// Retrieve the "username" cookie
+$username = $_COOKIE["username"];
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Accessing Cookies with JavaScript:</strong>
+            <p>You can use JavaScript to access cookies set on the client side. The <code>document.cookie</code> property allows you to read and manipulate cookies in the user's browser.</p>
+            <pre><code>
+// Read a cookie with JavaScript
+var username = document.cookie;
+
+// Write a cookie with JavaScript
+document.cookie = "username=John; expires=Thu, 01 Jan 2030 00:00:00 GMT; path=/";
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Using Cookie Data:</strong>
+            <p>Once you retrieve the data from cookies, you can use it for various purposes, such as personalizing content, remembering user preferences, or maintaining session information.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Cookie Expiration:</strong>
+            <p>Cookies can have an expiration date, after which they are automatically deleted. This allows you to control how long the information remains available for use.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Security Considerations:</strong>
+            <p>When using cookie data, be mindful of security. Avoid storing sensitive information in cookies, and consider using encryption and secure flags for better protection.</p>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

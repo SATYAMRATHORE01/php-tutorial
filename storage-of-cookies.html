@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage of Cookies at Client Side</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Storage of Cookies at Client Side</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Cookies are small pieces of data that are stored at the client side, specifically in a user's web browser. They are a common mechanism for web applications to store and retrieve information between HTTP requests and sessions. Let's delve into the details of cookie storage:</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Creating a Cookie:</strong>
+            <p>When a web server sends an HTTP response, it can include one or more cookies in the response headers. A cookie typically consists of a name, a value, and optional attributes like an expiration date and domain.</p>
+            <pre><code>
+Set-Cookie: username=John; expires=Thu, 01 Jan 2030 00:00:00 GMT; path=/
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Storage Location:</strong>
+            <p>Cookies are stored on the client side, usually in a file on the user's computer. In most browsers, these files are called "cookies.txt" or "cookies.sqlite." The specific location may vary depending on the browser and operating system.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Accessing Cookies:</strong>
+            <p>Browsers provide a JavaScript API for accessing and manipulating cookies. You can use JavaScript to read, write, and delete cookies on the client side. The <code>document.cookie</code> property is commonly used for this purpose.</p>
+            <pre><code>
+// Read a cookie
+var username = document.cookie;
+
+// Write a cookie
+document.cookie = "username=John; expires=Thu, 01 Jan 2030 00:00:00 GMT; path=/";
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Cookie Expiration:</strong>
+            <p>Cookies can have an optional expiration date, after which they will be automatically deleted by the browser. This is useful for creating persistent or temporary data storage.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Security Considerations:</strong>
+            <p>It's important to be cautious when working with cookies to prevent security vulnerabilities. Secure and HttpOnly flags can be used to enhance cookie security.</p>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

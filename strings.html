@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Strings</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Strings</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Strings in PHP are used to store and manipulate text data. They are a fundamental data type and are incredibly versatile. Let's explore different aspects of PHP strings:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Creating Strings</h4>
+            <p>You can create strings by enclosing text within single quotes (<code>' '</code>) or double quotes (<code>" "</code>). For example:</p>
+            <pre><code>&lt;?php
+    $singleQuoted = 'Hello, PHP!';
+    $doubleQuoted = "Hello, PHP!";
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">String Concatenation</h4>
+            <p>You can combine strings using the period (<code>.</code>) operator. For example, concatenating two strings:</p>
+            <pre><code>&lt;?php
+    $greeting = "Hello, ";
+    $name = "John";
+    $message = $greeting . $name;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">String Functions</h4>
+            <p>PHP offers a variety of functions to manipulate strings. For example, using the <code>strlen()</code> function to get the length of a string:</p>
+            <pre><code>&lt;?php
+    $text = "This is a sample string.";
+    $length = strlen($text);
+    echo "The string has " . $length . " characters.";
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">String Manipulation</h4>
+            <p>You can manipulate strings by changing case, replacing text, or extracting substrings. For example, converting a string to uppercase:</p>
+            <pre><code>&lt;?php
+    $text = "Make me UPPERCASE";
+    $upperText = strtoupper($text);
+    echo $upperText;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Escape Sequences</h4>
+            <p>Escape sequences are used to include special characters in strings. For example, including a newline character:</p>
+            <pre><code>&lt;?php
+    $multiline = "Line 1\nLine 2";
+    echo $multiline;
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Understanding strings is crucial in PHP, as text processing is a fundamental part of web development. Whether you're working with user input, generating dynamic content, or handling file data, strings play a key role.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

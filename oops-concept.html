@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Object-Oriented Programming (OOP)</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Object-Oriented Programming (OOP)</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to organize and structure code. PHP supports OOP and allows you to create reusable and maintainable code. Let's explore the key concepts of PHP OOP:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Classes and Objects</h4>
+            <p>In PHP, a class is a blueprint for creating objects. Objects are instances of classes. For example, defining a simple class and creating objects from it:</p>
+            <pre><code>&lt;?php
+class Car {
+    public $brand;
+    public $model;
+
+    function displayInfo() {
+        return "This is a {$this->brand} {$this->model}.";
+    }
+}
+
+$car1 = new Car();
+$car1->brand = "Toyota";
+$car1->model = "Camry";
+
+$car2 = new Car();
+$car2->brand = "Honda";
+$car2->model = "Civic";
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Properties and Methods</h4>
+            <p>Classes can have properties (variables) and methods (functions). Properties store data, and methods perform actions. For example, the <code>displayInfo()</code> method in the previous example is a method of the <code>Car</code> class.</p>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Encapsulation</h4>
+            <p>Encapsulation is the concept of bundling data (properties) and methods that operate on the data within a class. It helps in controlling access to class members. Properties and methods can be public, private, or protected.</p>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Inheritance</h4>
+            <p>Inheritance allows one class to inherit the properties and methods of another class. It promotes code reusability and hierarchy. For example, creating a child class <code>SportsCar</code> that inherits from the <code>Car</code> class:</p>
+            <pre><code>&lt;?php
+class SportsCar extends Car {
+    public $topSpeed;
+
+    function displayInfo() {
+        return "This {$this->brand} {$this->model} can reach a top speed of {$this->topSpeed} mph.";
+    }
+}
+
+$sportsCar = new SportsCar();
+$sportsCar->brand = "Ferrari";
+$sportsCar->model = "458 Italia";
+$sportsCar->topSpeed = 202;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Polymorphism</h4>
+            <p>Polymorphism allows different classes to be treated as instances of the same class through inheritance and interfaces. It enables flexibility in using objects. For example, calling the <code>displayInfo()</code> method on both a <code>Car</code> and a <code>SportsCar</code> object.</p>
+        </div>
+
+        <p class="lead">PHP OOP is a powerful way to organize and structure your code, making it more modular, reusable, and easier to maintain. Understanding OOP principles is essential for building complex and scalable applications.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

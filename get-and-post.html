@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET and POST Methods</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">GET and POST Methods</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">HTTP (Hypertext Transfer Protocol) defines two primary methods for a client (e.g., a web browser) to send data to a web server: GET and POST.</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>GET Method:</strong>
+            <ul>
+                <li>The GET method is used to request data from a specified resource.</li>
+                <li>It appends the data to the URL in the form of query parameters.</li>
+                <li>GET requests are typically used for retrieving data, like searching on a search engine or opening a webpage.</li>
+                <li>Data sent using GET can be seen in the URL, making it less secure and suitable for non-sensitive data.</li>
+                <li>There are limitations on the length of the data that can be sent with a GET request.</li>
+            </ul>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>POST Method:</strong>
+            <ul>
+                <li>The POST method is used to submit data to be processed to a specified resource.</li>
+                <li>Data is sent in the request body, not in the URL, which makes it more secure for sensitive information.</li>
+                <li>POST requests are used when data needs to be updated or added, such as when submitting forms on a website.</li>
+                <li>There are no limitations on the amount of data that can be sent with a POST request.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-4">Examples:</h2>
+
+        <div class="alert alert-light" role="alert">
+            <strong>Example 1 - GET Method:</strong>
+            <p>Imagine you want to search for information about "cats" on a search engine. The URL for your search query might look like this:</p>
+            <code>https://www.example.com/search?query=cats</code>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <strong>Example 2 - POST Method:</strong>
+            <p>When you submit a contact form on a website, the data you enter (e.g., your name, email, and message) is sent to the server using the POST method. This data is not visible in the URL but is transmitted in the request body.</p>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

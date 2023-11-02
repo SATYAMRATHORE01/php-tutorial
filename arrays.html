@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Arrays</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Arrays</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Arrays in PHP are used to store multiple values in a single variable. They are versatile and can hold various types of data. Let's explore different aspects of PHP arrays:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Creating an Array</h4>
+            <p>You can create an array in PHP using the <code>array()</code> constructor or by using square brackets <code>[]</code>. For example:</p>
+            <pre><code>&lt;?php
+    // Using array() constructor
+    $fruits = array("Apple", "Banana", "Cherry");
+
+    // Using square brackets []
+    $colors = ["Red", "Green", "Blue"];
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Accessing Array Elements</h4>
+            <p>You can access array elements by their index, which starts at 0. For example, to get the first element of the <code>$fruits</code> array:</p>
+            <pre><code>&lt;?php
+    $firstFruit = $fruits[0];
+    echo "The first fruit is: " . $firstFruit;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Associative Arrays</h4>
+            <p>Associative arrays use named keys instead of numeric indices. They are useful for creating key-value pairs. For example:</p>
+            <pre><code>&lt;?php
+    $person = [
+        "first_name" => "John",
+        "last_name" => "Doe",
+        "age" => 30
+    ];
+    echo "First Name: " . $person["first_name"];
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Looping through Arrays</h4>
+            <p>You can use loops like <code>foreach</code> to iterate through array elements. For example, looping through the <code>$colors</code> array:</p>
+            <pre><code>&lt;?php
+    foreach ($colors as $color) {
+        echo "Color: " . $color . "&lt;br&gt;";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Multidimensional Arrays</h4>
+            <p>PHP allows you to create arrays of arrays, known as multidimensional arrays. This is useful for handling complex data structures. For example:</p>
+            <pre><code>&lt;?php
+    $students = [
+        ["Alice", 25],
+        ["Bob", 22],
+        ["Charlie", 28]
+    ];
+    echo "Name: " . $students[0][0] . ", Age: " . $students[0][1];
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Arrays are a fundamental data structure in PHP, and they are used for storing, organizing, and manipulating data. Understanding how to work with arrays is essential for many PHP applications.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

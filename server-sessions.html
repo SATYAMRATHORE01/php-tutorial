@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Server-Side Sessions</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Creating Server-Side Sessions</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Server-side sessions are a fundamental feature in web development that allow you to maintain state and store user-specific data across multiple web pages. Let's explore how to create single or multiple server-side sessions:</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Starting a Session in PHP:</strong>
+            <p>In PHP, you can start a session using the <code>session_start()</code> function. This function must be called before any output is sent to the browser.</p>
+            <pre><code>
+// Start a PHP session
+session_start();
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Creating a Session Variable:</strong>
+            <p>You can store data in the session by using session variables. These variables are accessible across different pages during the same session.</p>
+            <pre><code>
+// Store data in a session variable
+$_SESSION['username'] = 'John';
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Accessing Session Data:</strong>
+            <p>You can access session data by referring to the session variables. This allows you to retrieve user-specific information.</p>
+            <pre><code>
+// Access session data
+$username = $_SESSION['username'];
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Creating Multiple Sessions:</strong>
+            <p>It's possible to create and manage multiple sessions in PHP. Each session is identified by a unique session ID and can store different sets of data.</p>
+            <pre><code>
+// Start a second session
+session_id('second_session');
+session_start();
+
+// Store data in the second session
+$_SESSION['user_type'] = 'Admin';
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Session Termination:</strong>
+            <p>Sessions should be properly terminated when they are no longer needed. You can use the <code>session_destroy()</code> function to destroy the current session.</p>
+            <pre><code>
+// Terminate the current session
+session_destroy();
+            </code></pre>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Making in PHP</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Decision Making in PHP</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">In PHP, decision making is like making choices in real life. It allows your program to do different things based on different conditions. Here's how it works:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "if" Statement</h4>
+            <p>The "if" statement lets you ask a question and take different actions based on the answer. It's like deciding to go out if the weather is sunny:</p>
+            <pre><code>&lt;?php
+    $weather = "sunny";
+    if ($weather == "sunny") {
+        echo "Let's go out!";
+    } else {
+        echo "Stay indoors.";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "else if" Statement</h4>
+            <p>If you have more than two options, you can use "else if" to make more decisions. For example, choosing an outfit based on the weather:</p>
+            <pre><code>&lt;?php
+    $weather = "rainy";
+    if ($weather == "sunny") {
+        echo "Wear shorts.";
+    } else if ($weather == "rainy") {
+        echo "Grab an umbrella.";
+    } else {
+        echo "Decide what to wear.";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "switch" Statement</h4>
+            <p>When you have many options, a "switch" statement helps you choose between them. Think of it as picking a drink from a menu:</p>
+            <pre><code>&lt;?php
+    $choice = "coffee";
+    switch ($choice) {
+        case "tea":
+            echo "Tea is a good choice.";
+            break;
+        case "coffee":
+            echo "Coffee is a classic.";
+            break;
+        default:
+            echo "Make your selection.";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Decision making in PHP allows your program to act intelligently based on different conditions, just like how you make choices in everyday life. It's a way to add flexibility to your code.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

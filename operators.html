@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Operators</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Operators</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Operators in PHP are symbols that allow you to perform operations on variables and values. PHP provides various types of operators for different tasks. Here's a detailed overview of PHP operators:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Arithmetic Operators</h4>
+            <p>Arithmetic operators are used for basic math operations. Common arithmetic operators include <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. For example:</p>
+            <pre><code>&lt;?php
+    $x = 10;
+    $y = 5;
+    $sum = $x + $y;
+    $product = $x * $y;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Comparison Operators</h4>
+            <p>Comparison operators are used to compare values. Common comparison operators include <code>==</code> (equal), <code>!=</code> (not equal), <code>&lt;</code> (less than), <code>&gt;</code> (greater than), and more. For example:</p>
+            <pre><code>&lt;?php
+    $a = 10;
+    $b = 5;
+    $result = ($a > $b);
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Logical Operators</h4>
+            <p>Logical operators are used to perform logical operations. Common logical operators include <code>and</code>, <code>or</code>, <code>not</code>, and <code>xor</code>. For example:</p>
+            <pre><code>&lt;?php
+    $isTrue = true;
+    $isFalse = false;
+    $result = $isTrue && $isFalse;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Assignment Operators</h4>
+            <p>Assignment operators are used to assign values to variables. Common assignment operators include <code>=</code>, <code>+=</code>, <code>-=</code>, and so on. For example:</p>
+            <pre><code>&lt;?php
+    $x = 10;
+    $x += 5; // $x is now 15
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">String Operators</h4>
+            <p>String operators are used to manipulate strings. The <code>.</code> operator is used for string concatenation. For example:</p>
+            <pre><code>&lt;?php
+    $greeting = "Hello, ";
+    $name = "John";
+    $message = $greeting . $name;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Ternary Operator</h4>
+            <p>The ternary operator (conditional operator) allows you to assign a value based on a condition. For example:</p>
+            <pre><code>&lt;?php
+    $age = 25;
+    $message = ($age >= 18) ? "Adult" : "Minor";
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Understanding operators is essential in PHP, as they enable you to perform various operations on data and control the flow of your code. Different operators serve different purposes and are a fundamental part of PHP programming.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

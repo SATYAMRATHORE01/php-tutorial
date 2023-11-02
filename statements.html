@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Statements</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Statements</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">In PHP, statements are the building blocks of your code. Statements are executed sequentially and can perform various tasks. Here's an overview of different types of PHP statements:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Assignment Statements</h4>
+            <p>Assignment statements are used to assign values to variables. For example:</p>
+            <pre><code>&lt;?php
+    $name = "John";
+    $age = 30;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Conditional Statements</h4>
+            <p>Conditional statements allow you to execute code based on conditions. Common types include <code>if</code>, <code>else</code>, and <code>switch</code>. For example:</p>
+            <pre><code>&lt;?php
+    $age = 25;
+    if ($age &gt;= 18) {
+        echo "You are an adult.";
+    } else {
+        echo "You are not an adult.";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Loop Statements</h4>
+            <p>Loop statements allow you to repeat code. Common types include <code>for</code>, <code>while</code>, and <code>foreach</code>. For example:</p>
+            <pre><code>&lt;?php
+    for ($i = 1; $i &lt;= 5; $i++) {
+        echo "Iteration $i&lt;br&gt;";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Control Statements</h4>
+            <p>Control statements alter the normal flow of a program. For example, the <code>break</code> statement can exit a loop prematurely, and the <code>continue</code> statement can skip the current iteration. For example:</p>
+            <pre><code>&lt;?php
+    for ($i = 1; $i &lt;= 5; $i++) {
+        if ($i == 3) {
+            break;
+        }
+        echo "Iteration $i&lt;br&gt;";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Statements are essential for controlling the flow and behavior of your PHP code. Whether it's assigning values to variables, making decisions, or repeating actions, statements are fundamental to creating dynamic web applications.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

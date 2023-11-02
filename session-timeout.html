@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout in Sessions</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Timeout in Sessions</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Session timeout is an essential concept in web development, ensuring that sessions do not remain active indefinitely. Let's explore how to manage session timeouts:</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Session Timeout Definition:</strong>
+            <p>Session timeout is the period during which a session remains active and valid without user interaction. After the timeout period, the session is automatically terminated.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Setting Session Timeout in PHP:</strong>
+            <p>In PHP, you can set the session timeout using the <code>session.gc_maxlifetime</code> configuration. This value represents the maximum session lifetime in seconds.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>User Inactivity vs. Session Timeout:</strong>
+            <p>It's important to distinguish between user inactivity and session timeout. User inactivity timeout is based on the time since the user's last action, while session timeout is the overall maximum session duration.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Handling Timeout Events:</strong>
+            <p>When a session times out, you can implement mechanisms to handle the event. For example, you can redirect the user to a login page or perform cleanup tasks.</p>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Security Considerations:</strong>
+            <p>Properly managing session timeouts is crucial for security. It prevents unauthorized access to a user's session data when the user is not actively using the application.</p>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

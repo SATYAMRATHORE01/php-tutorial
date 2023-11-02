@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Loops</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Loops</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Loops in PHP are used to execute a block of code repeatedly. They are a powerful tool for performing tasks that require repetitive actions. Let's explore different types of loops in PHP:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "for" Loop</h4>
+            <p>The "for" loop is used when you know how many times you want to repeat an action. It has a counter and continues as long as the condition is true. For example, printing numbers from 1 to 5:</p>
+            <pre><code>&lt;?php
+    for ($i = 1; $i &lt;= 5; $i++) {
+        echo $i . "&lt;br&gt;";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "while" Loop</h4>
+            <p>The "while" loop is used when you want to repeat an action as long as a condition is true. It checks the condition before each iteration. For example, counting down from 5 to 1:</p>
+            <pre><code>&lt;?php
+    $count = 5;
+    while ($count > 0) {
+        echo $count . "&lt;br&gt;";
+        $count--;
+    }
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "do...while" Loop</h4>
+            <p>The "do...while" loop is similar to the "while" loop, but it ensures that the code block is executed at least once. It checks the condition after each iteration. For example, prompting the user for input until a valid choice is made:</p>
+            <pre><code>&lt;?php
+    $choice = "";
+    do {
+        echo "Choose an option (A, B, C): ";
+        $choice = readline();
+    } while ($choice != "A" && $choice != "B" && $choice != "C");
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">The "foreach" Loop</h4>
+            <p>The "foreach" loop is used for iterating over arrays. It simplifies array traversal and is particularly useful when working with arrays of data. For example, iterating through an array of names:</p>
+            <pre><code>&lt;?php
+    $names = ["Alice", "Bob", "Charlie", "David"];
+    foreach ($names as $name) {
+        echo "Name: " . $name . "&lt;br&gt;";
+    }
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Loops in PHP are a fundamental concept for automating repetitive tasks. Whether you know the number of iterations or need to keep looping until a certain condition is met, PHP provides versatile loop constructs to accomplish your goals.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

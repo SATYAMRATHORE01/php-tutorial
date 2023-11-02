@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Forms (Form Handling & Validation)</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Forms (Form Handling & Validation)</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Forms are an essential part of web applications. PHP allows you to create, handle, and validate forms. Let's explore how to work with forms in PHP:</p>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Creating a Form</h4>
+            <p>You can create HTML forms using the <code>&lt;form&gt;</code> element. For example, creating a simple login form:</p>
+            <pre><code>&lt;form action="login.php" method="post"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required&gt;
+    
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+    
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Handling Form Submissions</h4>
+            <p>PHP can process form data submitted via the <code>$_POST</code> or <code>$_GET</code> superglobals. For example, handling the login form submission in a PHP script:</p>
+            <pre><code>&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Perform authentication and validation
+}
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Form Validation</h4>
+            <p>Form validation ensures that the data submitted is valid and safe to process. You can use PHP to validate form fields, check for required values, and sanitize input. For example, validating the username:</p>
+            <pre><code>&lt;?php
+$username = $_POST["username"];
+if (empty($username)) {
+    $errors[] = "Username is required.";
+} elseif (!preg_match("/^[a-zA-Z0-9_]+$/", $username)) {
+    $errors[] = "Invalid username format.";
+}
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Displaying Validation Errors</h4>
+            <p>If validation fails, you can display error messages to the user. For example, showing validation errors in the login form:</p>
+            <pre><code>&lt;?php
+if (!empty($errors)) {
+    echo "&lt;div class='alert alert-danger'&gt;";
+    echo "&lt;p&gt;Please correct the following errors:&lt;/p&gt;";
+    echo "&lt;ul&gt;";
+    foreach ($errors as $error) {
+        echo "&lt;li&gt;" . $error . "&lt;/li&gt;";
+    }
+    echo "&lt;/ul&gt;";
+    echo "&lt;/div&gt;";
+}
+?&gt;</code></pre>
+        </div>
+
+        <div class="alert alert-light" role="alert">
+            <h4 class="alert-heading">Processing Form Data</h4>
+            <p>After validation, you can process and use the form data. For example, performing authentication and redirection after a successful login:</p>
+            <pre><code>&lt;?php
+if (isset($_POST["username"]) && isset($_POST["password"])) {
+    // Check username and password
+    if ($username === "user" && $password === "password") {
+        header("Location: welcome.php");
+        exit();
+    } else {
+        $errors[] = "Invalid credentials.";
+    }
+}
+?&gt;</code></pre>
+        </div>
+
+        <p class="lead">Working with forms in PHP is essential for building interactive web applications. Proper form handling and validation are crucial for user data security and the overall user experience.</p>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

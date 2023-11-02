@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Cookies</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">Introduction to Cookies</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">Cookies are small pieces of data stored on a user's computer by a web browser. They are commonly used in web development to store information that can be retrieved and used across different web pages.</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Key Points:</strong>
+            <ul>
+                <li>Cookies are typically used to store user preferences, session data, and other information that needs to persist across multiple requests.</li>
+                <li>They are limited in size and can store a small amount of text-based data.</li>
+                <li>Cookies are often used for tasks like user authentication, remembering shopping cart items, and tracking user behavior.</li>
+                <li>Each cookie is associated with a specific domain and can be read by the web server that set it.</li>
+                <li>Cookies can have an expiration date, after which they are automatically deleted from the user's computer.</li>
+            </ul>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Setting Cookies in PHP:</strong>
+            <p>In PHP, you can set cookies using the <code>setcookie()</code> function. Cookies are sent to the user's browser in the HTTP response headers.</p>
+            <pre><code>
+// Set a cookie that expires in one hour
+setcookie("user", "John", time() + 3600);
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Retrieving Cookies in PHP:</strong>
+            <p>To retrieve cookies in PHP, you can use the <code>$_COOKIE</code> superglobal array. It contains all the cookies sent by the user's browser.</p>
+            <pre><code>
+// Retrieve the "user" cookie
+$user = $_COOKIE["user"];
+            </code></pre>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

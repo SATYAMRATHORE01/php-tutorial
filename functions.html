@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Functions</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="display-4">PHP Functions</h1>
+    </header>
+    <main class="container mt-5">
+        <p class="lead">In PHP, functions are a powerful feature that allow you to encapsulate code for reuse and modularity. PHP functions can be categorized into several types:</p>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Simple Functions (No Return Value):</strong>
+            <p>Simple functions in PHP perform a specific task but do not return a value. They are called for their side effects, such as displaying information.</p>
+            <pre><code>
+function greet($name) {
+    echo "Hello, $name!";
+}
+
+// Call the function
+greet("John");
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Functions with a Return Value:</strong>
+            <p>These functions return a value to the caller, which can be stored in a variable or used for further computation.</p>
+            <pre><code>
+function add($a, $b) {
+    return $a + $b;
+}
+
+// Call the function and store the result
+$sum = add(5, 3);
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Recursive Functions:</strong>
+            <p>Recursive functions are functions that call themselves. They are commonly used for solving problems that can be broken down into smaller, similar subproblems.</p>
+            <pre><code>
+function factorial($n) {
+    if ($n <= 1) {
+        return 1;
+    }
+    return $n * factorial($n - 1);
+}
+
+// Calculate the factorial of 5
+$result = factorial(5);
+            </code></pre>
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <strong>Anonymous Functions (Closures):</strong>
+            <p>Anonymous functions, also known as closures, allow you to create functions on the fly. They are useful for tasks like callbacks and event handling.</p>
+            <pre><code>
+$add = function ($a, $b) {
+    return $a + $b;
+};
+
+// Call the anonymous function
+$result = $add(7, 2);
+            </code></pre>
+        </div>
+    </main>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
